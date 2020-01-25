@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Github autosize uploaded high dpi images</title>
+    <style>
+        body {
+            padding: .5rem;
+        }
+
+        label {
+            white-space: nowrap;
+            font-size: 1rem;
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="dpi">Choose your system scale %</label>
+        <select id="dpi">
+            <option value=1>100%</option>
+            <option value=1.25>125%</option>
+            <option value=1.5>150%</option>
+            <option value=1.75>175%</option>
+            <option value=2>200%</option>
+            <option value=2.25>225%</option>
+            <option value=2.5>250%</option>
+            <option value=2.75>275%</option>
+            <option value=3>300%</option>
+            <option value=3.5>350%</option>
+        </select>
+    </div>
+    <script src="paste.js"></script>
+</body>
+
+</html>

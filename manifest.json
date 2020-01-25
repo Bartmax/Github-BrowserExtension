@@ -1,0 +1,33 @@
+{
+    "name": "Github autosize high DPI images",
+    "version": "0.0.0.4",
+    "manifest_version": 2,
+    "description": "A Chromium Extension that converts markdown into img tag with calculated width based on user system dpi.",
+    "icons": {
+        "128": "icons/githubdpi_128x128.png"
+    },
+    "background": {
+        "scripts": [
+            "background-scripts/background.js"
+        ],
+        "persistent": false
+    },
+    "page_action": {
+        "default_title": "page",
+        "default_popup": "paste/paste.html"
+    },
+    "permissions": [
+        "declarativeContent",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.github.com/*"
+            ],
+            "js": [
+                "content-scripts/content.js"
+            ]
+        }
+    ]
+}
